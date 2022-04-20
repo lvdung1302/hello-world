@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+:root{
+    --primary-color: #d1731a;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .toggle{
@@ -23,7 +27,7 @@
 }
 
 .toggle.active{
-    background: #000 url(./close.png);
+    background: #00bcd4 url(./close.png);
     background-size: 25px;
     background-position: center;
     background-repeat: no-repeat; 
@@ -88,7 +92,7 @@ section{
 }
 
 .banner .contentBx h4 span{
-    color: #00bcd4;
+    color: #db9710;
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -106,7 +110,7 @@ p{
 }
 
 .btn{
-    background: #00bcd4;
+    background: rgb(235, 142, 12);
     color: #fff;
     padding: 10px 30px;
     display: inline-block;
@@ -117,7 +121,8 @@ p{
 
 .sidebar{
     position: fixed;
-    background: #000;
+    background: url(http://genk.mediacdn.vn/k:2015/2-1440133142840/facebook-bat-dau-thu-nghiem-dang-anh-dong-tren-fanpage-va-quang-cao.gif);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,9 +150,9 @@ p{
 .sidebar ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 3em;
     margin: 10px 0;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -243,4 +248,372 @@ p{
 
 .about .content .imgBx img{
     max-width: 100%;
+}
+
+.services{
+    background: rgb(128, 127, 127);
+}
+
+.services .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgb(128, 127, 127);
+}
+
+.services .content .servicesBx{
+    padding: 40px 20px;
+    max-width: 340px;
+    margin: 20px;
+    transition: 0.5s;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.services .content .servicesBx:hover{
+    background: #000;
+}
+
+.services .content .servicesBx img{
+    max-width: 80px;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover img{
+    filter: invert(1);
+
+}
+
+.services .content .servicesBx h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover h2{
+    color: #fff;
+}
+
+.services .content .servicesBx p{
+    margin: 0;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover p{
+    color: #fff;
+}
+
+.work .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.work .content .workBx{
+    position: relative;
+    width: 265px;
+    height: 265px;
+    margin: 10px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.work .content .workBx .imgBx,
+.work .content .workBx .textBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work .content .workBx .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work .content .workBx .textBx{
+    background: #000;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.work .content .workBx:hover .textBx{
+    opacity: 1;
+}
+
+.work .content .workBx .textBx h3{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1em;
+}
+
+.pro{
+    display : flex;
+    align-items : center;
+    justify-content : center;  
+    background: wheat;
+    min-height : 800px;
+}
+  
+.pro .container{
+    position : relative;
+    width : 1100px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap : wrap;
+    padding : 30px;  
+}
+  
+.pro .container .card {
+    position: relative;
+    max-width : 300px;
+    height : 215px;  
+    background-color : #fff;
+    margin : 30px 10px;
+    padding : 20px 15px;
+    
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+}
+.pro .container .card:hover {
+    height : 320px;    
+}
+  
+  
+.pro .container .card .image {
+    position : relative;
+    width : 200px;
+    height : 200px;
+    
+    top : -40%;
+    left: 8px;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+}
+  
+.pro .container .card .image img {
+    max-width : 100%;
+    border-radius : 15px;
+}
+  
+.pro .container .card .content {
+    position : relative;
+    top : -140px;
+    padding : 10px 15px;
+    color : #111;
+    text-align : center;
+    
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;      
+}
+  
+.pro .container .card:hover .content {
+    margin-top : 30px;
+    visibility : visible;
+    opacity : 1;
+    transition-delay: 0.2s;
+}
+  
+.con {
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	position: relative;
+	font-family: "Montserrat";  
+}
+
+.con .container {
+	min-width: 700px;
+	min-height: 350px;
+	border-radius: 20px;
+	position: relative;
+	-webkit-transition: 1.5s ease-in-out;
+	transition: 1.5s ease-in-out;
+	transform-style: preserve-3d;
+}
+
+.con .side {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 20px 50px;
+	color: #fff;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	border-radius: 20px;
+}
+.con .content {
+	transform: translatez(70px) scale(0.8);
+	line-height: 1.5em;
+}
+.con .content h1 {
+	position: relative;
+}
+.con .content p {
+	margin-top: 50px;
+	line-height: 2em;
+}
+.con .content h1:before {
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	height: 3px;
+	background-color: #3e3;
+	width: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.con .front {
+	background-color: #333;
+	z-index: 2;
+	background-size: cover;
+	background-image: url(./yi1.jpg);
+}
+.con .back {
+	background-color: #333;
+	transform: rotateY(180deg);
+	z-index: 0;
+	padding-top: 10px;
+	background-image: url(./za3.webp);
+}
+.con .container:hover {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.con form {
+	text-align: left;
+}
+.con .back h1 {
+	margin: 0;
+}
+.con form label,
+.con form input {
+	display: block;
+}
+.con form input,
+.con form textarea {
+	background: transparent;
+	border: 0;
+	border-bottom: 2px solid #444;
+	padding: 5px;
+	width: 100%;
+	color: #fff;
+}
+.con form label {
+	margin: 15px 0;
+    font-size: 1.8em;
+}
+.con form input[type="submit"] {
+	display: block;
+	width: auto;
+	margin: 10px auto;
+	padding: 5px 10px;
+	border: 3px solid #555;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.ha{
+    height: 100vh;
+    background: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    color: white;
+}
+.ha h1{
+    padding: 10px 0;
+    color: #fff;
+    font-size: 44px;
+    text-align: center;
+}
+
+.ha .card{
+    background: #242628;
+    width: 350px;
+    height: 400px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 5px;
+}
+
+.ha img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+.ha .card__img{
+    width: 140px;
+    height: 140px;
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    transform: translateY(25px);
+    transition: 0.5s;
+}
+
+.ha .card h2{
+    margin-top: 35px;
+}
+
+.ha .card p{
+    color: var(--primary-color);
+}
+
+.ha .card button{
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.ha .card button:hover{
+    background-color: #f2726a;
+}
+
+.ha .card__img:hover{
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    transform: unset;
+    border: none;
 }
