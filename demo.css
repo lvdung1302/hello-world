@@ -1,0 +1,90 @@
+* { 
+    margin : 0;
+    padding: 0;
+    box-sizing : border-box;
+    font-family : "Poppins", sans-serif;
+  }
+  body {
+    display : flex;
+    align-items : center;
+    justify-content : center;  
+    background: url(https://scontent.fdad2-1.fna.fbcdn.net/v/t31.18172-8/14196007_1106641392755159_1652731158903124378_o.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_ohc=79sI6ybf5lwAX9fSQ7q&_nc_ht=scontent.fdad2-1.fna&oh=00_AT_40cDc3ZU_yHUE0uudmlA7Hj5LqSPPGRu0OJYUbmHg5A&oe=62FFA0DF);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 800px;
+  }
+  
+  .container {
+    position : relative;
+    width : 1100px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap : wrap;
+    padding : 30px;  
+  }
+
+  .container .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  
+  .container .card {
+    position: relative;
+    max-width : 300px;
+    height : 215px;  
+    background-color : #fff;
+    margin : 30px 10px;
+    padding : 20px 15px;
+    
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+  }
+  .container .card:hover {
+    height : 320px;    
+  }
+  
+  
+  .container .card .image {
+    position : relative;
+    width : 260px;
+    height : 260px;
+    
+    top : -40%;
+    left: 8px;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+  }
+  
+  .container .card .image img {
+    max-width : 100%;
+    border-radius : 15px;
+  }
+  
+  .container .card .content {
+    position : relative;
+    top : -140px;
+    padding : 10px 15px;
+    color : #111;
+    text-align : center;
+    
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+      
+  }
+  
+  .container .card:hover .content {
+     margin-top : 30px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+    
+  }
